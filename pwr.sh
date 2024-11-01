@@ -27,7 +27,7 @@ print_line() {
 clear
 print_line
 print_centered "PWR TOOLS" $YELLOW
-print_centered "Created by CRXA NODE" $GREEN
+print_centered "Created by ACHAN NODE" $GREEN
 print_line
 echo ""
 
@@ -186,7 +186,7 @@ update_pwr() {
         ensure_backup_folder
         mv config.json backup/
         rm -rf config.json
-        wget https://github.com/pwrlabs/PWR-Validator-Node/raw/main/config.json
+        wget https://github.com/pwrlabs/PWR-Validator/raw/refs/heads/main/config.json
         systemctl stop pwr
         pkill -f java
         systemctl start pwr
@@ -196,8 +196,8 @@ update_pwr() {
         ensure_backup_folder
         mv config.json validator.jar backup/
         rm -rf config.json validator.jar
-        wget https://github.com/pwrlabs/PWR-Validator-Node/raw/main/config.json
-        wget https://github.com/pwrlabs/PWR-Validator-Node/raw/main/validator.jar
+        wget https://github.com/pwrlabs/PWR-Validator/raw/refs/heads/main/config.json
+        wget https://github.com/pwrlabs/PWR-Validator/releases/download/13.0.0/validator.jar
         systemctl stop pwr
         pkill -f java
         systemctl start pwr
