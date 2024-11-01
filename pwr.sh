@@ -112,8 +112,8 @@ install_pwr() {
     sudo apt install -y openjdk-19-jre-headless
     
     [ "$LANG_CHOICE" = "id" ] && print_color $GREEN "Mengunduh perangkat lunak node validator..." || print_color $GREEN "Downloading validator node software..."
-    wget https://github.com/pwrlabs/PWR-Validator-Node/raw/main/validator.jar -O validator.jar
-    wget https://github.com/pwrlabs/PWR-Validator-Node/raw/main/config.json -O config.json
+    wget https://github.com/pwrlabs/PWR-Validator/releases/download/13.0.0/validator.jar -O validator.jar
+    wget https://github.com/pwrlabs/PWR-Validator/raw/refs/heads/main/config.json -O config.json
     
     IP_ADDRESS=$(hostname -I | awk '{print $1}')
     [ "$LANG_CHOICE" = "id" ] && print_color $GREEN "Alamat IP terdeteksi: $IP_ADDRESS" || print_color $GREEN "Detected IP Address: $IP_ADDRESS"
