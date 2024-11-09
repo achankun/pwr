@@ -195,7 +195,7 @@ update_pwr() {
         old_version=$(curl -s http://localhost:8085/version/)
         ensure_backup_folder
         mv config.json validator.jar backup/
-        rm -rf config.json validator.jar blocks rocksdb
+        sudo rm -rf validator.jar config.json blocks rocksdb
         wget https://github.com/pwrlabs/PWR-Validator/raw/refs/heads/main/config.json
         wget https://github.com/pwrlabs/PWR-Validator/releases/download/13.2.9/validator.jar
         systemctl stop pwr
